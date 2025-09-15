@@ -1,0 +1,46 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs and test data
+logs/
+*.log
+*.csv
+*.json
+
+# ML models
+models/
+*.pkl
+*.joblib
+
+# Test artifacts
+tests/__pycache__/
+*.coverage
+.cache/
+.pytest_cache/
+
+# Environment files
+.env
+*.sqlite3
+
+# Jupyter notebooks (if any)
+*.ipynb
+
+# Distribution/build
+dist/
+build/
+*.egg-info/

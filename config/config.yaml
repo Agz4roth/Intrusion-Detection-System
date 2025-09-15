@@ -1,0 +1,52 @@
+app:
+  mode: both  # Options: log, network, both
+
+network:
+  interface: "Wi-Fi"
+  bpf_filter: ""  # Optional packet filter (e.g., "port 22")
+
+logs:
+  files:
+    - logs/test.log  # This will be overridden dynamically based on OS
+  follow: true
+  poll_interval_sec: 1.0
+
+alerts:
+  console: true
+  email:
+    enabled: false  # Set to true to enable email alerts
+    smtp_host: ""
+    smtp_port: 587
+    use_tls: true
+    username: ""
+    password: ""
+    from_addr: ""
+    to_addrs: []
+
+database:
+  path: data/ids.db
+
+threats:
+  severity_threshold: low
+  rules_file: config/signature_rules.json
+
+  # API key for abuseipdb.com (IP reputation scoring)
+  abuseipdb_api_key: "b2d51c4856896eb85bdd24c2a72da3a477a11617d939d9af47f0a0b78f19e2f9c1f759564d5a7e93"
+  ip_reputation_threshold: 50
+
+  # API key for virustotal.com (IP and file hash analysis)
+  virustotal_api_key: "15efeb48d149d87448269edec93133e0624c65256e410bbf1edeeaca84022732"
+
+# Notifier setup
+notifier:
+  telegram_token: "8059281232:AAFiSu3vSPQfblFPbeCmJ_uCKKlRtL8s4-o" #YOUR_BOT_TOKEN
+  telegram_chat_id: "259439091"  #YOUR_CHAT_ID
+
+  webhook_url: ""   #https://your-webhook-endpoint.com
+
+  email_config:
+    smtp_server: "" #smtp.gmail.com
+    port: 587
+    sender: ""      #your_email@gmail.com
+    password: ""    #your_email_password
+    recipient: ""   #target_email@gmail.com
