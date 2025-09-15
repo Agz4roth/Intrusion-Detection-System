@@ -39,8 +39,8 @@ threats:
 
 # Notifier setup
 notifier:
-  telegram_token: "8059281232:AAFiSu3vSPQfblFPbeCmJ_uCKKlRtL8s4-o" #YOUR_BOT_TOKEN
-  telegram_chat_id: "259439091"  #YOUR_CHAT_ID
+  telegram_token: "" #YOUR_BOT_TOKEN
+  telegram_chat_id: ""  #YOUR_CHAT_ID
 
   webhook_url: ""   #https://your-webhook-endpoint.com
 
