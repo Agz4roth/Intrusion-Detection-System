@@ -1,0 +1,394 @@
+[
+  {
+    "id": "SSH_BRUTE_FORCE",
+    "pattern": "Failed password for invalid user\\s+\\w+\\s+from\\s+(\\d{1,3}\\.){3}\\d{1,3}\\s+port\\s+\\d+",
+    "source": "log",
+    "description": "SSH brute force attempt with IP and port",
+    "severity": "high"
+  },
+    {
+      "id": "PORT_902_ACCESS",
+      "pattern": "902",
+      "description": "Access to port 902 (iss-realsecure)",
+      "severity": "medium",
+      "source": "network"
+    },
+    {
+      "id": "PORT_912_ACCESS",
+      "pattern": "912",
+      "description": "Access to port 912 (apex-mesh)",
+      "severity": "medium",
+      "source": "network"
+    },
+    {
+      "id": "PORT_5357_ACCESS",
+      "pattern": "5357",
+      "description": "Access to port 5357 (wsdapi)",
+      "severity": "low",
+      "source": "network"
+    },
+    {
+      "id": "PORT_7070_ACCESS",
+      "pattern": "7070",
+      "description": "Access to port 7070 (realserver)",
+      "severity": "low",
+      "source": "network"
+    },
+    {
+      "id": "PORT_6464_ACCESS",
+      "pattern": "6464",
+      "description": "Access to port 6464 (custom test)",
+      "severity": "low",
+      "source": "network"
+    },
+  {
+    "id": "TEST_PORT_6464",
+    "pattern": "6464",
+    "description": "Test rule for port 6464 traffic",
+    "severity": "low",
+    "source": "network"
+  },
+  {
+    "id": "PORT_SCAN",
+    "pattern": "22",
+    "description": "Access to SSH port",
+    "severity": "medium",
+    "source": "network"
+  },
+  {
+    "id": "SSH_SUCCESSFUL_LOGIN",
+    "pattern": "Accepted password for\\s+\\w+\\s+from\\s+(\\d{1,3}\\.){3}\\d{1,3}\\s+port\\s+\\d+",
+    "source": "log",
+    "description": "Successful SSH login",
+    "severity": "medium"
+  },
+  {
+    "id": "SUSPICIOUS_PORT_ACCESS",
+    "pattern": "port\\s+(22|443|3389)",
+    "source": "log",
+    "description": "Access to sensitive ports (SSH, HTTPS, RDP)",
+    "severity": "medium"
+  },
+  {
+    "id": "ROOT_USER_ACTIVITY",
+    "pattern": "\\b(root|admin)\\b",
+    "source": "log",
+    "description": "Activity involving privileged user",
+    "severity": "medium"
+  },
+  {
+    "id": "TCP_SYN_SCAN",
+    "pattern": "Flags:.*SYN.*Window.*",
+    "source": "network",
+    "description": "TCP SYN scan detected",
+    "severity": "high"
+  },
+  {
+    "id": "UDP_PACKET_DETECTED",
+    "pattern": "\\bUDP\\b.*(\\d{1,3}\\.){3}\\d{1,3}",
+    "source": "network",
+    "description": "UDP packet with IP detected",
+    "severity": "low"
+  },
+  {
+    "id": "GENERIC_LOGIN_ATTEMPT",
+    "pattern": "(login|authentication)\\s+(attempt|failed|success)",
+    "source": "log",
+    "description": "Generic login activity",
+    "severity": "low"
+  },
+  {
+    "id": "MULTIPLE_FAILED_LOGINS",
+    "pattern": "Failed password.*from.*",
+    "source": "log",
+    "description": "Repeated failed login attempts",
+    "severity": "high"
+  },
+  {
+    "id": "TEST_HIGH",
+    "pattern": "CRITICAL ERROR",
+    "source": "log",
+    "description": "Test high severity alert",
+    "severity": "high"
+  },
+  {
+    "id": "FIREWALL_CRITICAL_ERROR",
+    "pattern": "critical error in module firewall",
+    "source": "log",
+    "description": "Critical firewall failure detected",
+    "severity": "high"
+  },
+  {
+    "id": "DDOS_SYN_FLOOD",
+    "pattern": "SYN flood detected|大量的SYN请求|excessive SYN packets",
+    "source": "network",
+    "description": "Possible SYN flood DDoS attack",
+    "severity": "high"
+  },
+  {
+    "id": "DDOS_UDP_FLOOD",
+    "pattern": "UDP flood detected|high volume UDP packets|大量的UDP流量",
+    "source": "network",
+    "description": "Possible UDP flood DDoS attack",
+    "severity": "high"
+  },
+  {
+    "id": "DDOS_HTTP_GET_FLOOD",
+    "pattern": "multiple GET requests from same IP|HTTP flood detected",
+    "source": "log",
+    "description": "Possible HTTP GET flood attack",
+    "severity": "high"
+  },
+  {
+    "id": "DDOS_ICMP_FLOOD",
+    "pattern": "excessive ICMP Echo Requests|ping flood detected",
+    "source": "network",
+    "description": "Possible ICMP flood DDoS attack",
+    "severity": "high"
+  },
+  {
+    "id": "SSH_BRUTE_FORCE",
+    "pattern": "Failed password for invalid user\\s+\\w+\\s+from\\s+(\\d{1,3}\\.){3}\\d{1,3}\\s+port\\s+\\d+",
+    "source": "log",
+    "description": "SSH brute force attempt with IP and port",
+    "severity": "high"
+  },
+  {
+    "id": "MULTIPLE_FAILED_LOGINS",
+    "pattern": "Failed password.*from.*",
+    "source": "log",
+    "description": "Repeated failed login attempts",
+    "severity": "high"
+  },
+  {
+    "id": "GENERIC_LOGIN_ATTEMPT",
+     "pattern": "(login|authentication)\\s+(attempt|failed|success)",
+    "source": "log",
+    "description": "Generic login activity",
+    "severity": "low"
+  },
+  {
+    "id": "SSH_SUCCESSFUL_LOGIN",
+    "pattern": "Accepted password for\\s+\\w+\\s+from\\s+(\\d{1,3}\\.){3}\\d{1,3}\\s+port\\s+\\d+",
+    "source": "log",     "description": "Successful SSH login",
+    "severity": "medium"
+  },
+  {
+    "id": "ROOT_USER_ACTIVITY",
+    "pattern": "\\b(root|admin)\\b",
+    "source": "log",
+    "description": "Activity involving privileged user",
+    "severity": "medium"
+  },
+  {
+    "id": "SUSPICIOUS_PORT_ACCESS",
+    "pattern": "port\\s+(22|443|3389)",
+    "source": "log",
+    "description": "Access to sensitive ports (SSH, HTTPS, RDP)",
+    "severity": "medium"
+  },
+  {
+    "id": "UNAUTHORIZED_PANEL_ACCESS",
+    "pattern": "access denied to admin panel",
+    "source": "log",
+    "description": "Unauthorized access attempt to admin panel",
+    "severity": "high"
+  },
+  {
+    "id": "TCP_SYN_SCAN",
+    "pattern": "Flags:.*SYN.*Window.*",
+    "source": "network",
+    "description": "TCP SYN scan detected",
+    "severity": "high"
+  },
+  {
+    "id": "UDP_PACKET_DETECTED",
+    "pattern": "\\bUDP\\b.*(\\d{1,3}\\.){3}\\d{1,3}",
+    "source": "network",
+    "description": "UDP packet with IP detected",
+    "severity": "low"
+  },
+  {
+    "id": "ICMP_PING_SWEEP",
+    "pattern": "ICMP Echo Request from",
+    "source": "network",
+    "description": "Ping sweep detected",
+    "severity": "medium"
+  },
+  {
+    "id": "SQL_INJECTION_ATTEMPT",
+    "pattern": "(SELECT|UNION|DROP|INSERT).*FROM.*WHERE.*",
+    "source": "log",
+    "description": "SQL injection attempt detected",
+    "severity": "high"
+  },
+  {
+    "id": "XSS_ATTACK",
+    "pattern": "<script>.*</script>",
+    "source": "log",
+    "description": "Cross-site scripting attempt",
+    "severity": "medium"
+  },
+  {
+    "id": "COMMAND_INJECTION",
+    "pattern": "(;|&&|\\|\\|)\\s*(ls|cat|whoami|id)",
+    "source": "log",
+    "description": "Command injection attempt",
+    "severity": "high"
+  },
+  {
+    "id": "REMOTE_CODE_EXECUTION",
+    "pattern": "exec\\((\"|').*(\"|')\\)",
+    "source": "log",
+    "description": "Remote code execution attempt",
+    "severity": "high"
+  },
+  {
+    "id": "WEB_SHELL_UPLOAD",
+    "pattern": "upload.*shell\\.php",
+    "source": "log",
+    "description": "Web shell upload attempt",
+    "severity": "high"
+  },
+  {
+    "id": "TOR_ACCESS_DETECTED",
+    "pattern": "connection to tor exit node",
+    "source": "network",
+    "description": "TOR network access detected",
+    "severity": "medium"
+  },
+  {
+    "id": "DATA_EXFILTRATION",
+    "pattern": "large file transfer to external IP",
+    "source": "log",
+    "description": "Potential data exfiltration",
+    "severity": "high"
+  },
+  {
+    "id": "FIREWALL_CRITICAL_ERROR",
+    "pattern": "critical error in module firewall",
+    "source": "log",
+    "description": "Critical firewall failure detected",
+    "severity": "high"
+  },
+  {
+    "id": "LOG_TAMPERING",
+    "pattern": "log file deleted|log rotation forced",
+    "source": "log",
+    "description": "Log tampering attempt",
+    "severity": "high"
+  },
+  {
+    "id": "PRIVILEGE_ESCALATION",
+    "pattern": "sudo\\s+-i|su\\s+root",
+    "source": "log",
+    "description": "Privilege escalation attempt",
+    "severity": "high"
+  },
+  {
+    "id": "SUSPICIOUS_POWERSHELL",
+    "pattern": "powershell.*(Invoke|Download|EncodedCommand)",
+    "source": "log",
+    "description": "Suspicious PowerShell activity",
+    "severity": "high"
+  },
+  {
+    "id": "MALWARE_EXECUTION",
+    "pattern": "executed suspicious binary.*\\.exe",
+    "source": "log",
+    "description": "Malware execution detected",
+    "severity": "high"
+  },
+  {
+    "id": "REGISTRY_MODIFICATION",
+    "pattern": "registry key modified.*Run",
+    "source": "log",
+    "description": "Persistence via registry modification",
+    "severity": "medium"
+  },
+  {
+    "id": "UNAUTHORIZED_SOFTWARE_INSTALL",
+    "pattern": "installed unknown package",
+    "source": "log",
+    "description": "Unauthorized software installation",
+    "severity": "medium"
+  },
+  {
+    "id": "CLIPBOARD_MONITORING",
+    "pattern": "clipboard accessed by process",
+    "source": "log",
+    "description": "Clipboard monitoring attempt",
+    "severity": "medium"
+  },
+  {
+    "id": "SCREENSHOT_CAPTURE",
+    "pattern": "screenshot saved to",
+    "source": "log",
+    "description": "Screenshot capture detected",
+    "severity": "medium"
+  },
+  {
+    "id": "USB_DEVICE_INSERTED",
+    "pattern": "new USB device detected",
+    "source": "log",
+    "description": "USB device insertion",
+    "severity": "low"
+  },
+  {
+    "id": "ARP_SPOOFING",
+    "pattern": "duplicate ARP response from",
+    "source": "network",
+    "description": "ARP spoofing attempt",
+    "severity": "high"
+  },
+  {
+    "id": "DNS_TUNNELING",
+    "pattern": "suspicious DNS query length",
+    "source": "network",
+    "description": "Possible DNS tunneling",
+    "severity": "high"
+  },
+  {
+    "id": "SSL_DOWNGRADE",
+    "pattern": "SSL protocol downgraded to",
+    "source": "network",
+    "description": "SSL/TLS downgrade attempt",
+    "severity": "medium"
+  },
+  {
+    "id": "LATERAL_MOVEMENT",
+    "pattern": "remote execution via SMB|WMI|RDP",
+    "source": "log",
+    "description": "Lateral movement detected",
+    "severity": "high"
+  },
+  {
+    "id": "HACKING_TOOL_USAGE",
+    "pattern": "nmap|metasploit|sqlmap",
+    "source": "log",
+    "description": "Use of known hacking tools",
+    "severity": "medium"
+  },
+  {
+    "id": "OBFUSCATED_SCRIPT",
+    "pattern": "eval\\((\"|').*(\"|')\\)|base64_decode",
+    "source": "log",
+    "description": "Obfuscated script execution",
+    "severity": "high"
+  },
+  {
+    "id": "ACCESS_TO_HIDDEN_ENDPOINT",
+    "pattern": "/admin/hidden|/config/secret",
+    "source": "log",
+    "description": "Access to hidden web endpoint",
+    "severity": "medium"
+  },
+  {
+    "id": "USB_DEVICE_INSERTED",
+    "pattern": "usb.*",
+    "source": "log",
+    "description": "USB device insertion",
+    "severity": "low"
+  }
+  
+]
