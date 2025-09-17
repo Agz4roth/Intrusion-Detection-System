@@ -12,11 +12,6 @@ A modular, Python-based IDS designed for real-world use. It supports signature-b
 - DevOps teams needing lightweight IDS
 
 
-- Security researchers  
-- SOC analysts  
-- Students learning threat detection  
-- DevOps teams needing lightweight IDS
-
 ---
 
 ## Features
